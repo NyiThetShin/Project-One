@@ -1,0 +1,1087 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&family=Edu+TAS+Beginner:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+         overflow-x:hidden;
+}
+body{
+    width:100%;
+    font-family: 'Cormorant SC', serif;
+     height: 100vh;
+     background-color: rgb(10, 10, 27);
+
+}
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url(./image/luca-bravo-O453M2Liufs-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.wrapper::before{
+    content: '';
+    position: absolute;
+    bottom:0px;
+    left: 0px;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(to top,rgb(10, 10, 27),transparent);
+    z-index: 7;
+}
+.main{
+    width: 90%;
+    height: 100vh;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    position: relative;
+
+}
+
+/* nav section start  */
+.nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+    font-family: 'Edu TAS Beginner', cursive;
+    position: relative;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    z-index: 8;
+    background: rgba(0, 0, 0, 0.5);
+}
+.logo{
+    padding:3px;
+    font-size: 25px;
+    font-weight: 700;
+    color: aqua;
+    letter-spacing: 3px;
+}
+
+.nav_indicator {
+    width: 45%;
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+transition: all 1s ease;
+}
+.nav_indicator.nav_active{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100vh;
+    z-index: 9;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    background:rgb(20, 20, 57);
+    transform: all 0.5s ease;
+}
+
+.nav_indicator div{
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 1s ease;
+}
+.nav_indicator div a {
+    text-decoration: none;
+   color:aqua;
+}
+.nav_indicator.nav_active div{
+    width: 80%;
+    margin-bottom: 50px;
+    text-align: center;
+    padding: 4px;
+
+ 
+}
+.nav_indicator.nav_active div:hover{
+    border:1px solid black;
+    border-radius: 10px;
+       background: whitesmoke;
+}
+
+.bar{
+    display: none;
+}
+.bar i {
+    font-size: 20px;
+    color: aqua;
+}
+/* nav section end  */
+
+/* slide section start  */
+
+.location_name{
+    width: 350px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 10%;
+    top: 60%;
+    
+}
+
+
+.location_name h1,h3{
+    text-align: center;
+}
+.hero_name {
+    font-size: 30px;
+    color: aqua;
+}
+.hero_des {
+    font-size: 25px;
+    color: white;
+    font-weight: 600;
+}
+.location_name button{
+    padding:5px;
+    background: transparent;
+    border:1px solid aqua;
+    border-radius: 5px;
+    font-size: 25px;
+    margin-top: 20px;
+    color:#fff
+}
+
+.location_place{
+    width: 300px;
+    height: 400px;
+    background-image: url(./image/top-places-to-visit-in-the-world-machu-picchu-peru.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top:40%;
+    right: 10%;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    border-radius: 5px;
+}
+
+
+.location_place:hover{
+    transform: scale(1.1);
+}
+.location_place i:nth-child(1){
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color:aqua;
+    font-size: 25px;
+}
+.location_place i:nth-child(2){
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    color:aqua;
+    font-size: 25px;
+}
+
+/* slide section end  */
+
+/* book places start  */
+
+.book_places{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+.book_places h1{
+    width: 100%;
+    text-align: center;
+    font-size: 45px;
+    color: #fff;
+}
+.card_wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.card{
+    width: 250px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border:1px solid whitesmoke;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 25px;
+    margin-right: 25px;
+}
+.img_ctn{
+    width: 90%;
+    height: 80%;
+    margin:  0 auto;
+
+    overflow: hidden;
+}
+.img_ctn img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.card_location{
+    width: 90%;
+    padding: 5px;
+    display: flex;
+    justify-content:flex-start ;
+    align-items: center;
+}
+.card_location p{
+    font-family: 500;
+    margin-left:10px;
+    color: #fff;
+}
+.des{
+    width: 90%;
+    margin: 0 auto;
+}
+.card p{
+    color: #fff;
+}
+.card_location i {
+    color: #fff;
+}
+.card_price{
+    width: 90%;
+    margin: 0 auto;
+}
+.card_star i{
+    color: yellow;
+}
+.card_price span{
+    text-decoration: line-through;
+}
+.card_star{
+    width: 90%;
+    margin: 0 auto;
+}
+.card_btn{
+    width: 90%;
+    margin: 0 auto;
+}
+.card_btn button{
+    padding: 5px;
+    border-radius: 5px;
+    background: aquamarine;
+    cursor: pointer;
+}
+/* book places end  */
+
+
+/* booking contact start  */
+
+    .booking_contact{
+        width: 90%;
+        margin:0 auto;
+        margin-top: 40px;
+    }
+    .booking_contact h1{
+        font-size: 45px;
+        font-weight: 500;
+        width: 100%;
+        text-align: center;
+        color: #fff;
+    }
+    .input_section{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .booking_image{
+        width: 30%;
+        height: 350px;
+
+    }
+    .booking_image img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .booking_form{
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding:5px;
+
+    }
+    .booking_form label{
+        font-size: 20px;
+        font-weight: 500;
+        color: #fff;
+    }
+    .booking_form input{
+        width: 350px;
+        padding:10px;
+        border-radius: 5px;
+        background: transparent;
+        border:1px solid aqua;
+        color:#fff
+    }
+    .booking_form input::placeholder{
+        color: #fff;
+    }
+    .location_ctn,.count_ctn,.arrival_ctn,.leave_ctn {
+        margin-bottom: 10px;
+    }
+    .booking_form_submit{
+        width: 70%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding:7px;
+    }
+    .booking_form_submit button{
+        padding:5px;
+        width: 100px;
+        background: aqua;
+        border-radius: 7px;
+        outline: none;
+        cursor:pointer
+    }
+/* booking contact   */
+
+/* why start  */
+
+    .question{
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+    .rely{
+        width: 100%;
+        text-align: center;
+        font-size: 25px;
+        color: #fff;
+    }
+    .question h1{
+        width: 100%;
+        text-align: center;
+        font-size: 35px;
+        color: #fff;
+    }
+    .response{
+        width: 100%;
+        margin: 0 auto;
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 30px;
+    }
+    .response_item{
+        width:150px;
+        padding:10px;
+        text-align: center;
+        border: 1px solid white;
+        border-radius: 2px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+        cursor: pointer;
+        transition: all 0.4s ease;
+    }
+    .response_item:hover{
+        box-shadow: 2px 2px 5px whitesmoke
+    }
+    .response_item p{
+        color: #fff;
+    }
+    .icon_ctn {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: aqua;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+    }
+    .icon_ctn i {
+        font-size: 20px;
+    }
+    .info{
+        font-weight: 700;
+    }
+/* why end  */
+
+/* discover start  */
+
+.discover{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.discover h1 {
+    width:100%;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+}
+.discover_pic{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.main_discover{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.pic_one,.pic_three {
+    width: 250px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding:5px;
+    margin-right: 10px;
+}
+.pic_two{
+    width: 250px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:5px;
+    margin-right: 10px;
+}
+
+.img_container{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transition: all 1s ease;
+    overflow: hidden;
+}
+
+.img_container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.hover_effect{
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display:none
+}
+.hover_effect p{
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+}
+.hover_effect button{
+    padding:4px;
+    border-radius: 5px;
+    background:transparent;
+    color:white;
+    cursor:pointer;
+    margin-top:10px ;
+    border: 1px solid aqua;
+    outline: none;
+    appearance: none;
+}
+.img_container:hover .hover_effect{
+    display:flex;
+}
+
+/* discover end  */
+
+
+/* contact start  */
+    .contact_wrapper{
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+    .contact_wrapper h1{
+        width:100%;
+        text-align: center;
+        color: #fff;
+    }
+    .contact{
+        width:100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        padding:5px;
+        margin-top: 20px;
+    }   
+    .contact_image{
+        width: 40%;
+        height: 300px;
+    }
+    .contact_image img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .contact_form{
+        width:40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .contact_form label{
+        font-size: 20px;
+        color: #fff;
+    }
+    .contact_form input{
+        width: 350px;
+        padding:7px;
+        border-radius: 5px;
+        font-size: 15px;
+        background: transparent;
+        border:1px solid aqua;
+        color:#fff;
+    }
+    .contact_form textarea{
+        width: 350px;
+        border-radius: 5px;
+        font-size: 15px;
+        background: transparent;
+        border:1px solid aqua;
+        padding:7px;
+        color:#fff;
+    }
+   .name,.email,.message{
+    margin-bottom: 20px;
+   }
+   .contact_btn{
+    width: 70%;
+    display: flex;
+    justify-content:flex-end;
+    padding:10px;
+   }
+   .contact_btn button{
+    width: 100px;
+    padding:5px;
+    border-radius: 5px;
+    cursor: pointer;
+    background: aqua;
+   }
+
+
+
+/* contact end  */
+
+/* footer start  */
+
+   .footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding:10px;
+    background: rgb(20, 20, 57);
+   }
+   .footer_about{
+    width: 20%;
+    padding:5px;
+    margin-bottom: 10px;
+   }
+   .footer_about h1{
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    color: aqua;
+   }
+   .footer_about_text{
+    width: 100%;
+    margin-top:7px;
+
+   }
+   .footer_about_text p{
+    font-weight: 700;
+    font-size:20px;
+    color:#fff
+   }
+
+
+
+
+/* footer end  */
+
+
+
+
+
+
+
+
+
+
+/* media start  */
+
+
+@media (max-width:1450px) {
+    .location_place{
+    width: 250px;
+    height: 300px;
+    background-image: url(./image/top-places-to-visit-in-the-world-machu-picchu-peru.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top:40%;
+    right: 10%;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    border-radius: 5px;
+}
+}
+@media (max-width:1100px) {
+    .main_discover{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+}
+@media (max-width:1000px) {
+    .nav_indicator{
+        display: none;
+    }
+    .nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    font-family: 'Edu TAS Beginner', cursive;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    z-index: 8;
+    background: rgba(0, 0, 0, 0.5);
+}
+    .bar {
+        display: flex;
+    }
+    .main_discover{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+}
+@media (max-width:900px) {
+        .main_discover{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+   .img_container{
+    width: 150px;
+    height: 150px;
+    
+
+} 
+.pic_one,.pic_three {
+    width: 150px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding:5px;
+    margin-right: 10px;
+}
+.pic_one,.pic_two,.pic_three{
+    height: 350px;
+}
+   .footer_about h1{
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+     color: aqua;
+   }
+   .footer_about_text p{
+    font-weight: 700;
+    font-size:17px;
+    color:#fff
+   }
+}
+@media (max-width:850px) {
+.main_discover{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+}
+.location_name{
+    width: 250px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 3%;
+    top: 60%;
+    
+}
+}
+@media (max-width:800px) {
+    .booking_image{
+        width: 50%;
+        height: 350px;
+
+    }
+       .contact{
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding:5px;
+        margin-top: 20px;
+    }   
+       .contact_image{
+        width: 100%;
+        height: 300px;
+    }
+    .contact_btn{
+    width: 100%;
+    display: flex;
+    justify-content:flex-end;
+    padding:10px;
+   }
+}
+@media (max-width:750px) {
+   .main_discover{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+} 
+
+}
+@media (max-width:700px) {
+   .location_name{
+    width: 250px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 3%;
+    top: 60%;
+    
+}
+    .location_place{
+    width: 250px;
+    height: 300px;
+    background-image: url(./image/top-places-to-visit-in-the-world-machu-picchu-peru.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top:40%;
+    right: 5%;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    border-radius: 5px;
+}
+}
+@media (max-width:659px) {
+       .booking_image{
+        width: 80%;
+        height: 350px;
+
+    }
+}
+
+@media (max-width:650px) {
+   .main_discover{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+        flex-wrap: wrap;
+}
+.pic_two{
+    height:300px;
+}
+.img_container{
+    width:300px;
+    height:300px;
+    
+
+}
+.pic_one,.pic_three {
+    width: 300px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 10px;
+}
+
+}
+
+@media (max-width:600px) {
+    .location_name{
+        display: none;
+    }
+    .book_places{
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.card{
+    width: 200px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border:1px solid white;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 25px;
+    margin-right: 25px;
+}
+.question h1{
+    font-size: 25px;
+}
+.rely{
+    font-size: 18px;
+}
+}
+@media (max-width:500px) {
+        .booking_form_submit{
+        width: 80%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding:7px;
+    }
+}
+@media (max-width:450px) {
+    .card{
+    width: 250px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border:1px solid white;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 25px;
+}
+ .booking_image{
+        width: 100%;
+        height: 350px;
+
+    }
+     .footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding:10px;
+    background: rgb(20, 20, 57);
+   }
+   .footer_about{
+    width: 50%;
+    padding:5px
+   }
+      .footer_about h1{
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 35px;
+    color: aqua;
+   }
+   .footer_about_text p{
+    font-weight: 700;
+    font-size:25px;
+    color:#fff
+   }
+}
+@media (max-width:400px) {
+    .pic_two{
+    height:230px;
+}
+.img_container{
+    width:230px;
+    height:230px;
+    
+
+}
+.pic_one,.pic_three {
+    width: 230px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 10px;
+}
+  .contact_form input{
+        width: 300px;
+        padding:5px;
+        border-radius: 5px;
+        font-size: 15px;
+    }
+      .contact_form textarea{
+        width: 300px;
+        border-radius: 5px;
+        font-size: 15px;
+    }
+      .footer_about{
+    width: 90%;
+    padding:5px
+   }
+      .footer_about h1{
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    color: aqua;
+   }
+   .footer_about_text p{
+    font-weight: 700;
+    font-size:20px;
+    color:#fff
+   }
+   .location_place{
+    width: 200px;
+    height: 250px;
+    background-image: url(./image/top-places-to-visit-in-the-world-machu-picchu-peru.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top:55%;
+    right: 2%;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    border-radius: 5px;
+}
+}
+@media (max-width:380px) {
+       .booking_form label{
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .booking_form input{
+        width: 250px;
+        padding:5px;
+        border-radius: 5px;
+    }
+     .contact_form input{
+        width: 250px;
+        padding:5px;
+        border-radius: 5px;
+        font-size: 15px;
+    }
+      .contact_form textarea{
+        width: 250px;
+        border-radius: 5px;
+        font-size: 15px;
+    }
+}
+@media (max-width:300px) {
+       .contact_wrapper{
+        width: 100%;
+        margin-top: 20px;
+    }
+        .contact_form input{
+        width: 200px;
+        padding:5px;
+        border-radius: 5px;
+        font-size: 15px;
+    }
+      .contact_form textarea{
+        width: 200px;
+        border-radius: 5px;
+        font-size: 15px;
+    }
+    .logo{
+    padding:3px;
+    font-size: 18px;
+    font-weight: 700;
+    color: aqua;
+    letter-spacing: 3px;
+}
+}
+@media (max-width:280px) {
+        .booking_form label{
+        font-size: 15px;
+        font-weight: 500;
+    }
+    .booking_form input{
+        width: 200px;
+        padding:5px;
+        border-radius: 5px;
+    }
+}
